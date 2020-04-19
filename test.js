@@ -4,7 +4,6 @@ const original =
 const replacements = [
   { re: 'Salut', with: 'Bonjour' },
   { re: '(text)|(algo)', with: 'Schtroumpf' },
-  { re: '\\s\\.*é', with: ' xx ' },
 ];
 
 let afterReplacements = original;

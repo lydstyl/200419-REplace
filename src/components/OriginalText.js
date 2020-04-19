@@ -1,15 +1,24 @@
 const OriginalText = () => {
+  let state = localStorage.getItem('state');
+  state = JSON.parse(state);
+
   const label = document.createElement('label');
   const labelTextNode = document.createTextNode('Votre texte original:');
   label.appendChild(labelTextNode);
 
   const textarea = document.createElement('textarea');
-  const textNode = document.createTextNode(
-    "Salut, je suis un texte qui va être remplacé plusieurs fois et je vais t'aider à trouver le bon algo...."
-  );
+  const textNode = document.createTextNode(state.originalText);
   textarea.appendChild(textNode);
   textarea.addEventListener('change', (e) => {
     console.log(e.target.value);
+
+    let state = localStorage.getItem('state');
+    state = JSON.parse(state);
+
+    let newState = { ...state, originalText: e.target.value };
+    newState = JSON.stringify(newState);
+
+    localStorage.setItem('state', newState);
   });
 
   const originalText = document.createElement('div');
