@@ -2,7 +2,6 @@ import { getState, setState } from '../utils/utils';
 
 const state = getState();
 let { replacements } = state;
-console.log('sss', state);
 
 const List = document.createElement('ul');
 
@@ -20,8 +19,6 @@ replacements.forEach(({ id, re, substitute }) => {
     state.replacements = state.replacements.filter(
       (replacement) => replacement.id !== e.target.parentNode.id
     );
-
-    console.log('xxx', state);
 
     setState(state);
 
