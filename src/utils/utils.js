@@ -18,6 +18,10 @@ export const getState = () => {
   } else {
     state = JSON.parse(localStorage.getItem('state'));
 
-    return { ...state };
+    return { ...state }; // return a copie of the state
   }
+};
+
+export const setState = (newState) => {
+  localStorage.setItem('state', JSON.stringify(newState));
 };
