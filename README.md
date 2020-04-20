@@ -26,6 +26,11 @@ Build assets for production
 npm run build
 ```
 
+# To do
+
+- CSS
+- test
+
 # Regex cheatsheet
 
 - \+ au moins 1 et ? optional
