@@ -64,6 +64,7 @@ header {
     min-height: 250px;
     padding: $space5;
     line-height: 2;
+    text-align: justify;
   }
 }
 
@@ -72,6 +73,7 @@ header {
 
   #replacements {
     width: 100%;
+    margin-bottom: $space10;
     padding: $space2;
     background: rgba(0, 0, 0, 0.3);
 
@@ -102,6 +104,10 @@ header {
       margin-bottom: $space10;
       padding: 6px;
     }
+  }
+
+  #result {
+    text-align: justify;
   }
 }
 
