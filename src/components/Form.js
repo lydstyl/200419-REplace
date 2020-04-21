@@ -2,9 +2,17 @@ import { getState, setState } from '../utils/utils';
 
 const Form = document.createElement('form');
 
+const reLabel = document.createElement('label');
+reLabel.innerText = 'Expression régulière de recherche';
+Form.appendChild(reLabel);
+
 const RE = document.createElement('input');
 RE.setAttribute('name', 're');
 Form.appendChild(RE);
+
+const withLabel = document.createElement('label');
+withLabel.innerText = 'Remplacer par';
+Form.appendChild(withLabel);
 
 const With = document.createElement('input');
 RE.setAttribute('name', 'with');
@@ -41,8 +49,6 @@ Add.addEventListener('click', () => {
     state.replacements = state.replacements.filter(
       (replacement) => replacement.id !== e.target.parentNode.id
     );
-
-    console.log('xxx', state);
 
     setState(state);
 
