@@ -1,0 +1,23 @@
+// Google Fonts
+@import url(https://fonts.googleapis.com/css?family=Wallpoet|Roboto&display=swap);
+
+// Font Variables
+$f1: 'Wallpoet', serif;
+$f2: Roboto, Arial, Helvetica, sans-serif;
+
+// Colors
+$primary-color: #6200ee;
+$variant-color: #bb86fc;
+$space20: 160px;
+$space10: 80px;
+$space5: 40px;
+$space2: 20px;
+
+@mixin shadow {
+  box-shadow: 5px 13px 14px -2px rgba(0, 0, 0, 0.16);
+}
+
+@mixin title-text {
+  font-family: $f1;
+  font-size: 30px;
+}
