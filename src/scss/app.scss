@@ -31,6 +31,8 @@ $f2: Roboto, Arial, Helvetica, sans-serif;
   border-radius: 4px;
 }
 
+// Animation or transition
+
 [type='button'],
 button {
   width: $space5;
@@ -40,8 +42,22 @@ button {
   border-radius: 50%;
   background-color: $variant-color;
   @include shadow;
+
+  transition: box-shadow 0.4s;
+  transition: background-color 0.4s;
+}
+[type='button']:hover,
+button:hover {
+  box-shadow: 5px 18px 14px -2px rgba(0, 0, 0, 0.4);
+  background-color: white;
+}
+[type='button']:active,
+button:active {
+  box-shadow: 5px 6px 14px -2px rgba(0, 0, 0, 0.05);
+  background-color: $primary-color;
 }
 
+// main elements
 body {
   background: $primary-color;
   color: #fff;
@@ -83,6 +99,8 @@ header {
   border-bottom: 5px #fff solid;
   @include shadow;
 }
+
+// mobile first css
 
 #original-text {
   width: 100%;
@@ -127,6 +145,10 @@ header {
         font-family: $f1;
       }
 
+      label + input {
+        width: 100%;
+      }
+
       label,
       input {
         display: block;
@@ -151,14 +173,14 @@ header {
       padding: 6px;
       border-radius: 4px;
       font-family: $f1;
-      font-size: 20px;
+      font-size: $space2;
     }
   }
 
   #result {
-    min-width: 340px;
     min-height: 340px;
     margin-bottom: $space10;
+    padding: $space5;
     text-align: justify;
     border: 1px dashed;
   }
@@ -171,6 +193,13 @@ header {
       ul {
         width: 45%;
       }
+      ul {
+        margin-left: $space2;
+      }
+    }
+
+    #result {
+      min-width: 340px;
     }
   }
 }
@@ -185,6 +214,7 @@ header {
       form,
       ul {
         width: 100%;
+        margin-left: 0;
       }
     }
 
