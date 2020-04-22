@@ -19,7 +19,7 @@ RE.setAttribute('name', 'with');
 Form.appendChild(With);
 
 const Add = document.createElement('input');
-Add.setAttribute('value', '+');
+Add.setAttribute('value', 'Ajouter');
 Add.setAttribute('type', 'button');
 
 Add.addEventListener('click', () => {

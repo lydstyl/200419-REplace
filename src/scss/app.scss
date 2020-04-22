@@ -1,11 +1,29 @@
 // @import 'card';
 
-$primary-color: slateblue;
+$primary-color: #6200ee;
+$variant-color: #bb86fc;
 $space20: 160px;
 $space10: 80px;
 $space5: 40px;
 $space2: 20px;
 
+// Google Fonts
+@import url(https://fonts.googleapis.com/css?family=Wallpoet|Roboto&display=swap);
+
+// Font Variables
+$f1: 'Wallpoet', serif;
+$f2: Roboto, Arial, Helvetica, sans-serif;
+
+@mixin shadow {
+  box-shadow: 5px 13px 14px -2px rgba(0, 0, 0, 0.16);
+}
+
+@mixin title-text {
+  font-family: $f1;
+  font-size: 30px;
+}
+
+// RESET
 * {
   box-sizing: border-box;
   margin: 0;
@@ -13,11 +31,26 @@ $space2: 20px;
   border-radius: 4px;
 }
 
+[type='button'],
+button {
+  width: $space5;
+  height: $space5;
+  padding: 6px;
+  border: none;
+  border-radius: 50%;
+  background-color: $variant-color;
+  @include shadow;
+}
+
 body {
-  font-family: Arial, Helvetica, sans-serif;
   background: $primary-color;
   color: #fff;
+  font-family: $f2;
   line-height: 2;
+}
+
+h1 {
+  font-family: $f1;
 }
 
 ul {
@@ -48,6 +81,7 @@ header {
   background: rgba(0, 0, 0, 0.3);
   padding: $space5;
   border-bottom: 5px #fff solid;
+  @include shadow;
 }
 
 #original-text {
@@ -57,6 +91,7 @@ header {
   label {
     display: block;
     margin-bottom: $space2;
+    @include title-text;
   }
 
   textarea {
@@ -65,6 +100,7 @@ header {
     padding: $space5;
     line-height: 2;
     text-align: justify;
+    @include shadow;
   }
 }
 
@@ -76,6 +112,7 @@ header {
     margin-bottom: $space10;
     padding: $space2;
     background: rgba(0, 0, 0, 0.3);
+    @include shadow;
 
     form {
       display: inline-block;
@@ -86,11 +123,20 @@ header {
         margin-bottom: $space5;
       }
 
+      label {
+        font-family: $f1;
+      }
+
       label,
       input {
         display: block;
-        min-width: 50px;
         padding: 6px;
+      }
+
+      [type='button'] {
+        width: auto;
+        border-radius: 4px;
+        font-family: $f1;
       }
     }
 
@@ -103,11 +149,18 @@ header {
       width: 100%;
       margin-bottom: $space10;
       padding: 6px;
+      border-radius: 4px;
+      font-family: $f1;
+      font-size: 20px;
     }
   }
 
   #result {
+    min-width: 340px;
+    min-height: 340px;
+    margin-bottom: $space10;
     text-align: justify;
+    border: 1px dashed;
   }
 }
 
@@ -127,7 +180,7 @@ header {
     display: flex;
 
     #replacements {
-      width: 50%;
+      min-width: 300px;
 
       form,
       ul {
