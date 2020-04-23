@@ -10,8 +10,6 @@ const OriginalText = () => {
   const textNode = document.createTextNode(state.originalText);
   textarea.appendChild(textNode);
   textarea.addEventListener('change', (e) => {
-    console.log(e.target.value);
-
     let state = localStorage.getItem('state');
     state = JSON.parse(state);
 

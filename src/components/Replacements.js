@@ -29,7 +29,6 @@ getResultButton.addEventListener('click', () => {
   }
 
   result.innerText = afterReplacements;
-  console.log(afterReplacements);
 });
 
 getResultButton.innerText = 'Voir le résultat';
